@@ -1,12 +1,21 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sync = require('browser-sync').create();
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css/'))
         .pipe(sync.stream());
+});
+
+gulp.task('scripts', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('serve', function () {
