@@ -1,0 +1,20 @@
+@import 'src/variables';
+
+
+h1 {
+    font-size: 40px;
+    color: $primaryColor;
+}
+
+main {
+    
+    .ne-klasse-nach-main {
+        color: blue;
+        
+        .noch-eine {
+            display: block;
+            font-size: 22px;
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+h1 {
+  font-size: 40px;
+  color: red; }
+
+main .ne-klasse-nach-main {
+  color: blue; }
+  main .ne-klasse-nach-main .noch-eine {
+    display: block;
+    font-size: 22px;
+    color: red; }
