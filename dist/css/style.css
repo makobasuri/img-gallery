@@ -1,10 +1,10 @@
 h1 {
   font-size: 40px;
-  color: red; }
+  color: dodgerblue; }
 
 main .ne-klasse-nach-main {
-  color: blue; }
+  color: dodgerblue; }
   main .ne-klasse-nach-main .noch-eine {
     display: block;
     font-size: 22px;
-    color: red; }
+    color: violet; }
