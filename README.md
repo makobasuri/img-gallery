@@ -12,6 +12,5 @@ and
 
 ## usage
 start the server with sass and html autoreloading with  
-```gulp```  
-
+```gulp serve```  
 Have fun.
