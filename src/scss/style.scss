@@ -1,5 +1,9 @@
 @import 'src/scss/variables';
 
+body {
+    background-color: #333;
+    color: #fff;
+}
 
 h1 {
     font-size: 40px;
@@ -17,4 +21,10 @@ main {
             color: $secondaryColor;
         }
     }
+}
+
+#myCanvas {
+    display: block;
+    margin: 50px auto;
+    background-color: #999;
 }

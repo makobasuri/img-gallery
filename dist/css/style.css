@@ -1,3 +1,7 @@
+body {
+  background-color: #333;
+  color: #fff; }
+
 h1 {
   font-size: 40px;
   color: dodgerblue; }
@@ -8,3 +12,8 @@ main .ne-klasse-nach-main {
     display: block;
     font-size: 22px;
     color: violet; }
+
+#myCanvas {
+  display: block;
+  margin: 50px auto;
+  background-color: #999; }

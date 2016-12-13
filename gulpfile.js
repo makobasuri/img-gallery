@@ -15,7 +15,8 @@ gulp.task('scripts', function () {
     return gulp.src('src/js/*.js')
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('dist/js/'))
+        .pipe(sync.stream());
 });
 
 gulp.task('serve', function () {
@@ -26,7 +27,8 @@ gulp.task('serve', function () {
     });
 
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch("*.html").on('change', sync.reload);
+    gulp.watch('*.html').on('change', sync.reload);
+    gulp.watch('src/js/*.js', ['scripts']);
 });
 
 gulp.task('default', ['serve']);

@@ -1,4 +1,4 @@
-# sass-browsersync-simple
+# canvas playground
 
 ## prerequisites
 You need node.js from https://nodejs.org  
