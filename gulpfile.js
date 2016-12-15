@@ -31,4 +31,4 @@ gulp.task('serve', function () {
     gulp.watch('src/js/*.js', ['scripts']);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['sass', 'scripts', 'serve']);
