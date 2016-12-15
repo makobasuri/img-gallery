@@ -1,4 +1,4 @@
-# canvas playground
+# img-gallery
 
 ## prerequisites
 You need node.js from https://nodejs.org  
