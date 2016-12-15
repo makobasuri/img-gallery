@@ -8,25 +8,21 @@ html {
 }
 
 body {
-    background-color: #333;
-    color: #fff;
+    background-color: $primaryBgColor;
+    color: $primaryFontColor;
     font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     font-size: 40px;
-    color: $primaryFontColor;
     text-align: center;
 }
 
-#myCanvas {
-    width: 80vw;
-    height: 60vw;
-    background-color: #999;
-    margin-bottom: 20px;
-}
+// --------------------------------------------------
+// Gallery
+// --------------------------------------------------
 
-.gallery--container {
+.gal--container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,7 +34,21 @@ h1 {
     border: 1px solid white;
 }
 
-#gallery--thumbs-container {
+.gal--canvas-container {
+    display: flex;
+    align-items: flex-end;
+    height: 60vw;
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
+#gal--myCanvas {
+    width: 80vw;
+    height: auto;
+    background-color: #999;
+}
+
+#gal--thumbs-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,8 +56,10 @@ h1 {
     height: 15vw;
 }
 
-.gallery--img {
-    //max-width: 100%;
+.gal--img {
     width: 20vw;
-    height: 15vw;
 }
+
+// --------------------------------------------------
+// Gallery END
+// --------------------------------------------------
