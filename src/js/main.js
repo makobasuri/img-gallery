@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    
-    function galAnimate(imageData) {
-        requestAnimationFrame(galAnimate);
-    }
 
     function galDrawImage(imgSrc) {
 
