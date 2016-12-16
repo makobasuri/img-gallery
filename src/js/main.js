@@ -1,28 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-
-    function galEffect() {
-
+    
+    function galAnimate(imageData) {
+        requestAnimationFrame(galAnimate);
     }
 
     function galDrawImage(imgSrc) {
 
         var canvas = document.getElementById('gal--myCanvas');
 
-        if(canvas.getContext) {
-            var ctx = canvas.getContext('2d');
-            var imgObject = new Image();         
-            imgObject.src = imgSrc;
+        var ctx = canvas.getContext('2d');
+        var imgObject = new Image();         
+        imgObject.src = imgSrc;
 
-            if (imgObject.width != canvas.width)
-                canvas.width = imgObject.width;
-            if (imgObject.height != canvas.height)
-                canvas.height = imgObject.height;
-
+        if (imgObject.width != canvas.width)
+            canvas.width = imgObject.width;
+        if (imgObject.height != canvas.height)
+            canvas.height = imgObject.height;
+        
+        imgObject.onload = function() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(imgObject, 0, 0);
-        } else {
-            alert("Can't get context!");
-        }
+        };    
     }
 
     function galFirstImage() {
@@ -31,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         galDrawImage(img);
     }
     galFirstImage();
-    
+
     function galChangeImage() {
         document.getElementById('gal--thumbs-container').addEventListener('click', function(event) {
 
@@ -39,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             if (targetElement.tagName == 'IMG') {
                 var img = targetElement.getAttribute('src');
-                console.log('test' + img);
                 galDrawImage(img);
             }
         });
     }
     galChangeImage();
+
 });
