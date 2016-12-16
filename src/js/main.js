@@ -23,10 +23,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function galAnimate() {
         setTimeout(function() {
             
+            ctx.save();
             ctx.globalAlpha = animPctComplete;
             ctx.drawImage(imgObject, 0, 0);
+            ctx.restore();
             animPctComplete += 0.01;
-            console.log(animPctComplete);
+            
 
             if(Math.floor(animPctComplete) !== 1) {
                 requestAnimationFrame(galAnimate);
@@ -55,4 +57,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     galChangeImage();
 
+    //CSS gallery
+
+    var cImages = document.getElementsByClassName('cgal--fullpicture');
+    var cThumbs = document.getElementsByClassName('cgal--img');
+    var cThumbsContainer = document.getElementById('cgal--thumbs-container');
+    var cVisible = document.getElementsByClassName('visible');
+
+    function toggleSiblings(siblings) {
+        console.log('siblings: '+siblings);
+    }
+
+    function toggleSelf(targetMe) {
+        console.log('I am: '+targetMe);
+    }
+
+    function getChildren(n, skipMe){
+        var r = [];
+        for ( ; n; n = n.nextSibling ) 
+        if ( n.nodeType == 1 && n != skipMe)
+            r.push( n );
+        toggleSiblings(r);
+    }
+
+    function getSiblings(n) {
+        return getChildren(n.parentNode.firstChild, n);
+    }
+
+    cThumbsContainer.addEventListener('click', function(event) {
+        var targetElement = event.target || event.srcElement;
+        getSiblings(targetElement);
+        toggleSelf(targetElement);
+    });
 });

@@ -8,18 +8,40 @@
 		<link rel="stylesheet" href="dist/css/style.css">
 	</head>
 	<body>
+		<!-- Canvas Gallery -->
 		<h1> Canvas Gallery</h1>
 
 		<div class = "gal--container">
 			<div class = "gal--canvas-container">
-				<canvas id = "gal--myCanvas" width = "800" height = "600"></canvas>
+				<canvas id = "gal--myCanvas" class="gal--myCanvas" width = "800" height = "600"></canvas>
 			</div>
-			<div id = "gal--thumbs-container">
+			<div id = "gal--thumbs-container" class = "gal--thumbs-container">
 				<img class = "gal--img" src="img/unsplash1.jpg"></img>
 				<img class = "gal--img" src="img/unsplash2.jpg"></img>	
 				<img class = "gal--img" src="img/unsplash3.jpg"></img>
 			</div>
 		</div>
+		<!-- Canvas Gallery END -->
+
+		<!-- CSS Gallery -->
+
+		<h1> Canvas Gallery</h1>
+
+		<div class = "cgal--container">
+			<div class = "cgal--canvas-container">
+				<img class = "cgal--fullpicture visible" src = "img/unsplash1.jpg"></img>
+				<img class = "cgal--fullpicture" src = "img/unsplash2.jpg"></img>
+				<img class = "cgal--fullpicture" src = "img/unsplash3.jpg"></img>
+			</div>
+			<div id = "cgal--thumbs-container" class = "cgal--thumbs-container">
+				<img class = "cgal--img" src="img/unsplash1.jpg"></img>
+				<img class = "cgal--img" src="img/unsplash2.jpg"></img>	
+				<img class = "cgal--img" src="img/unsplash3.jpg"></img>
+			</div>
+		</div>
+
+		<!-- CSS Gallery END -->
+
 		<script type="text/javascript" src="dist/js/main.js"></script>
 	</body>
 </html>
